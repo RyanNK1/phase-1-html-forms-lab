@@ -11,7 +11,36 @@
     <h2>For all your incorporated company needs</h2>
 
     <!-- First, create a form tag where our inputs will be nested -->
+<form action="example.com" method="post">
+  <label for="fullname">Enter your name</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Enter Name" required>
+  <label for="email">Enter your email</label>
+  <input type="email" id="email" name="email" placeholder="Enter Email" required>
+  <label for="phone">Enter your Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number (Optional)" required>
+  <label for="message">What would you like to tell us?</label>
+  <textarea name="message" id="message" placeholder="Enter Message" cols="30" rows="10"></textarea>
+  <label for="fullname">Enter your name</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
 
+  <h3>How would you rate our service? (1 being the lowest option, 5 being the highest)</h3>
+  <br>
+  <input type="radio" name="rating" value="5"/>5<br/>
+  <input type="radio" name="rating" value="4">
+  <input type="radio" name="rating" value="3">
+  <input type="radio" name="rating" value="2">
+  <input type="radio" name="rating" value="1">
+
+  <h3>What are your dogs favorite toys?</h3>
+    <input type="checkbox" name="toy-1" value="kong" /> Kong <br />
+    <input type="checkbox" name="toy-2" value="stuffed-animals" />Stuffed
+    Animals<br />
+    <input type="checkbox" name="toy-3" value="rope-toys" />Rope Toys<br />
+    <input type="checkbox" name="toy-4" value="squeaky-toys" />Squeaky Toys<br />
+    <input type="checkbox" name="toy-5" value="balls" />Balls, Frisbees,
+    anything a dog can fetch!<br />
+    <br />
+</form>
 
       <!-- Add a label for 'fullname'-->
 

@@ -1,0 +1,369 @@
+make  all-recursive
+make[1]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7'
+Making all in include
+make[2]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include'
+Making all in libxml
+make[3]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include/libxml'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include/libxml'
+make[3]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include'
+make[2]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/include'
+Making all in .
+make[2]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7'
+  CC       SAX.lo
+  CC       entities.lo
+entities.c: In function ‘xmlCopyEntitiesTable’:
+entities.c:952:31: warning: cast between incompatible function types from ‘xmlEntity * (*)(xmlEntity *)’ {aka ‘struct _xmlEntity * (*)(struct _xmlEntity *)’} to ‘void * (*)(void *, xmlChar *)’ {aka ‘void * (*)(void *, unsigned char *)’} [-Wcast-function-type]
+  952 |     return(xmlHashCopy(table, (xmlHashCopier) xmlCopyEntity));
+      |                               ^
+entities.c: In function ‘xmlDumpEntitiesTable’:
+entities.c:1106:24: warning: cast between incompatible function types from ‘void (*)(xmlEntity *, xmlBuffer *)’ {aka ‘void (*)(struct _xmlEntity *, struct _xmlBuffer *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 1106 |     xmlHashScan(table, (xmlHashScanner)xmlDumpEntityDeclScan, buf);
+      |                        ^
+  CC       encoding.lo
+  CC       error.lo
+error.c: In function ‘__xmlRaiseError’:
+error.c:634:26: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+  634 |     else if ((channel == (xmlGenericErrorFunc) fprintf) ||
+      |                          ^
+  CC       parserInternals.lo
+parserInternals.c: In function ‘xmlFreeParserCtxt’:
+parserInternals.c:1798:40: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 1798 |         xmlHashFree(ctxt->attsDefault, (xmlHashDeallocator) xmlFree);
+      |                                        ^
+  CC       parser.lo
+parser.c: In function ‘xmlGROW’:
+parser.c:2089:68: warning: cast between incompatible function types from ‘int (*)(void)’ to ‘int (*)(void *, char *, int)’ [-Wcast-function-type]
+ 2089 |          ((ctxt->input->buf) && (ctxt->input->buf->readcallback != (xmlInputReadCallback) xmlNop)) &&
+      |                                                                    ^
+parser.c: In function ‘xmlCtxtReset’:
+parser.c:14878:40: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+14878 |         xmlHashFree(ctxt->attsDefault, (xmlHashDeallocator) xmlFree);
+      |                                        ^
+  CC       tree.lo
+  CC       hash.lo
+hash.c: In function ‘xmlHashScan3’:
+hash.c:916:23: warning: cast between incompatible function types from ‘xmlHashScanner’ {aka ‘void (*)(void *, void *, unsigned char *)’} to ‘void (*)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *)’ {aka ‘void (*)(void *, void *, const unsigned char *, const unsigned char *, const unsigned char *)’} [-Wcast-function-type]
+  916 |                       (xmlHashScannerFull) f, data);
+      |                       ^
+  CC       list.lo
+  CC       xmlIO.lo
+xmlIO.c: In function ‘xmlParserInputBufferCreateMem’:
+xmlIO.c:2935:29: warning: cast between incompatible function types from ‘int (*)(void)’ to ‘int (*)(void *, char *, int)’ [-Wcast-function-type]
+ 2935 |         ret->readcallback = (xmlInputReadCallback) xmlNop;
+      |                             ^
+  CC       xmlmemory.lo
+  CC       uri.lo
+  CC       valid.lo
+valid.c: In function ‘xmlFreeElementTable’:
+valid.c:1608:24: warning: cast between incompatible function types from ‘void (*)(xmlElement *)’ {aka ‘void (*)(struct _xmlElement *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 1608 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeElement);
+      |                        ^
+valid.c: In function ‘xmlCopyElementTable’:
+valid.c:1657:45: warning: cast between incompatible function types from ‘xmlElement * (*)(xmlElement *)’ {aka ‘struct _xmlElement * (*)(struct _xmlElement *)’} to ‘void * (*)(void *, xmlChar *)’ {aka ‘void * (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 1657 |                                             (xmlHashCopier) xmlCopyElement));
+      |                                             ^
+valid.c: In function ‘xmlDumpElementTable’:
+valid.c:1746:24: warning: cast between incompatible function types from ‘void (*)(xmlElement *, xmlBuffer *)’ {aka ‘void (*)(struct _xmlElement *, struct _xmlBuffer *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 1746 |     xmlHashScan(table, (xmlHashScanner) xmlDumpElementDeclScan, buf);
+      |                        ^
+valid.c: In function ‘xmlFreeAttributeTable’:
+valid.c:2154:24: warning: cast between incompatible function types from ‘void (*)(xmlAttribute *)’ {aka ‘void (*)(struct _xmlAttribute *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2154 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeAttribute);
+      |                        ^
+valid.c: In function ‘xmlCopyAttributeTable’:
+valid.c:2202:37: warning: cast between incompatible function types from ‘xmlAttribute * (*)(xmlAttribute *)’ {aka ‘struct _xmlAttribute * (*)(struct _xmlAttribute *)’} to ‘void * (*)(void *, xmlChar *)’ {aka ‘void * (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2202 |                                     (xmlHashCopier) xmlCopyAttribute));
+      |                                     ^
+valid.c: In function ‘xmlDumpAttributeTable’:
+valid.c:2312:24: warning: cast between incompatible function types from ‘void (*)(xmlAttribute *, xmlBuffer *)’ {aka ‘void (*)(struct _xmlAttribute *, struct _xmlBuffer *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 2312 |     xmlHashScan(table, (xmlHashScanner) xmlDumpAttributeDeclScan, buf);
+      |                        ^
+valid.c: In function ‘xmlFreeNotationTable’:
+valid.c:2426:24: warning: cast between incompatible function types from ‘void (*)(xmlNotation *)’ {aka ‘void (*)(struct _xmlNotation *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2426 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeNotation);
+      |                        ^
+valid.c: In function ‘xmlCopyNotationTable’:
+valid.c:2473:37: warning: cast between incompatible function types from ‘xmlNotation * (*)(xmlNotation *)’ {aka ‘struct _xmlNotation * (*)(struct _xmlNotation *)’} to ‘void * (*)(void *, xmlChar *)’ {aka ‘void * (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2473 |                                     (xmlHashCopier) xmlCopyNotation));
+      |                                     ^
+valid.c: In function ‘xmlDumpNotationTable’:
+valid.c:2528:24: warning: cast between incompatible function types from ‘void (*)(xmlNotation *, xmlBuffer *)’ {aka ‘void (*)(struct _xmlNotation *, struct _xmlBuffer *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 2528 |     xmlHashScan(table, (xmlHashScanner) xmlDumpNotationDeclScan, buf);
+      |                        ^
+valid.c: In function ‘xmlFreeIDTable’:
+valid.c:2664:24: warning: cast between incompatible function types from ‘void (*)(xmlID *)’ {aka ‘void (*)(struct _xmlID *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2664 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeID);
+      |                        ^
+valid.c: In function ‘xmlRemoveID’:
+valid.c:2764:35: warning: cast between incompatible function types from ‘void (*)(xmlID *)’ {aka ‘void (*)(struct _xmlID *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 2764 |     xmlHashRemoveEntry(table, ID, (xmlHashDeallocator) xmlFreeID);
+      |                                   ^
+valid.c: In function ‘xmlFreeRefTable’:
+valid.c:3005:24: warning: cast between incompatible function types from ‘void (*)(xmlList *)’ {aka ‘void (*)(struct _xmlList *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 3005 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeRefList);
+      |                        ^
+valid.c: In function ‘xmlRemoveRef’:
+valid.c:3102:45: warning: cast between incompatible function types from ‘void (*)(xmlList *)’ {aka ‘void (*)(struct _xmlList *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 3102 |         xmlHashUpdateEntry(table, ID, NULL, (xmlHashDeallocator)
+      |                                             ^
+  CC       xlink.lo
+  CC       HTMLparser.lo
+HTMLparser.c: In function ‘htmlCtxtReset’:
+HTMLparser.c:6677:40: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 6677 |         xmlHashFree(ctxt->attsDefault, (xmlHashDeallocator) xmlFree);
+      |                                        ^
+  CC       HTMLtree.lo
+  CC       debugXML.lo
+debugXML.c: In function ‘xmlCtxtDumpEntities’:
+debugXML.c:1292:28: warning: cast between incompatible function types from ‘void (*)(xmlEntity *, xmlDebugCtxt *)’ {aka ‘void (*)(struct _xmlEntity *, struct _xmlDebugCtxt *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 1292 |         xmlHashScan(table, (xmlHashScanner) xmlCtxtDumpEntityCallback,
+      |                            ^
+debugXML.c:1302:28: warning: cast between incompatible function types from ‘void (*)(xmlEntity *, xmlDebugCtxt *)’ {aka ‘void (*)(struct _xmlEntity *, struct _xmlDebugCtxt *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 1302 |         xmlHashScan(table, (xmlHashScanner) xmlCtxtDumpEntityCallback,
+      |                            ^
+debugXML.c: In function ‘xmlShellRNGValidate’:
+debugXML.c:2366:13: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2366 |             (xmlRelaxNGValidityErrorFunc) fprintf,
+      |             ^
+debugXML.c:2367:13: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2367 |             (xmlRelaxNGValidityWarningFunc) fprintf,
+      |             ^
+debugXML.c:2378:13: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2378 |             (xmlRelaxNGValidityErrorFunc) fprintf,
+      |             ^
+debugXML.c:2379:13: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2379 |             (xmlRelaxNGValidityWarningFunc) fprintf,
+      |             ^
+debugXML.c: In function ‘xmlShellValidate’:
+debugXML.c:2650:19: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2650 |     vctxt.error = (xmlValidityErrorFunc) fprintf;
+      |                   ^
+debugXML.c:2651:21: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2651 |     vctxt.warning = (xmlValidityWarningFunc) fprintf;
+      |                     ^
+  CC       xpath.lo
+xpath.c: In function ‘xmlXPathDistinctSorted’:
+xpath.c:4585:23: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 4585 |     xmlHashFree(hash, (xmlHashDeallocator) xmlFree);
+      |                       ^
+In file included from ./include/libxml/parser.h:18,
+                 from ./include/libxml/globals.h:18,
+                 from ./include/libxml/threads.h:35,
+                 from ./include/libxml/xmlmemory.h:218,
+                 from xpath.c:45:
+xpath.c: In function ‘xmlXPathRegisterFuncNS’:
+xpath.c:4897:73: warning: ISO C forbids passing argument 4 of ‘xmlHashAddEntry2’ between function pointer and ‘void *’ [-Wpedantic]
+ 4897 |     return(xmlHashAddEntry2(ctxt->funcHash, name, ns_uri, XML_CAST_FPTR(f)));
+      |                                                                         ^
+./include/libxml/hash.h:56:29: note: in definition of macro ‘XML_CAST_FPTR’
+   56 | #define XML_CAST_FPTR(fptr) fptr
+      |                             ^~~~
+./include/libxml/hash.h:131:48: note: expected ‘void *’ but argument is of type ‘xmlXPathFunction’ {aka ‘void (*)(struct _xmlXPathParserContext *, int)’}
+  131 |                                          void *userdata);
+      |                                          ~~~~~~^~~~~~~~
+xpath.c: In function ‘xmlXPathFunctionLookupNS’:
+xpath.c:4978:24: warning: ISO C forbids assignment between function pointer and ‘void *’ [-Wpedantic]
+ 4978 |     XML_CAST_FPTR(ret) = xmlHashLookup2(ctxt->funcHash, name, ns_uri);
+      |                        ^
+xpath.c: In function ‘xmlXPathRegisterVariableNS’:
+xpath.c:5047:36: warning: cast between incompatible function types from ‘void (*)(xmlXPathObject *)’ {aka ‘void (*)(struct _xmlXPathObject *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5047 |                                    (xmlHashDeallocator)xmlXPathFreeObject));
+      |                                    ^
+xpath.c:5050:32: warning: cast between incompatible function types from ‘void (*)(xmlXPathObject *)’ {aka ‘void (*)(struct _xmlXPathObject *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5050 |                                (xmlHashDeallocator)xmlXPathFreeObject));
+      |                                ^
+xpath.c: In function ‘xmlXPathRegisteredVariablesCleanup’:
+xpath.c:5140:32: warning: cast between incompatible function types from ‘void (*)(xmlXPathObject *)’ {aka ‘void (*)(struct _xmlXPathObject *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5140 |     xmlHashFree(ctxt->varHash, (xmlHashDeallocator)xmlXPathFreeObject);
+      |                                ^
+xpath.c: In function ‘xmlXPathRegisterNs’:
+xpath.c:5171:35: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5171 |                                   (xmlHashDeallocator)xmlFree));
+      |                                   ^
+xpath.c:5173:31: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5173 |                               (xmlHashDeallocator)xmlFree));
+      |                               ^
+xpath.c: In function ‘xmlXPathRegisteredNsCleanup’:
+xpath.c:5222:31: warning: cast between incompatible function types from ‘xmlFreeFunc’ {aka ‘void (*)(void *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 5222 |     xmlHashFree(ctxt->nsHash, (xmlHashDeallocator)xmlFree);
+      |                               ^
+In file included from xpath.c:483:
+At top level:
+trionan.c:218:1: warning: ‘trio_is_negative’ defined but not used [-Wunused-function]
+  218 | trio_is_negative
+      | ^~~~~~~~~~~~~~~~
+trionan.c:194:1: warning: ‘trio_is_special_quantity’ defined but not used [-Wunused-function]
+  194 | trio_is_special_quantity
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+  CC       xpointer.lo
+  CC       xinclude.lo
+  CC       nanohttp.lo
+  CC       nanoftp.lo
+  CC       catalog.lo
+catalog.c: In function ‘xmlFreeCatalog’:
+catalog.c:444:17: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *)’ {aka ‘void (*)(struct _xmlCatalogEntry *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+  444 |                 (xmlHashDeallocator) xmlFreeCatalogEntry);
+      |                 ^
+catalog.c: In function ‘xmlCatalogConvertEntry’:
+catalog.c:760:32: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *)’ {aka ‘void (*)(struct _xmlCatalogEntry *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+  760 |                                (xmlHashDeallocator) xmlFreeCatalogEntry);
+      |                                ^
+catalog.c: In function ‘xmlConvertSGMLCatalog’:
+catalog.c:801:17: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *, xmlCatalog *)’ {aka ‘void (*)(struct _xmlCatalogEntry *, struct _xmlCatalog *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+  801 |                 (xmlHashScanner) xmlCatalogConvertEntry,
+      |                 ^
+catalog.c: In function ‘xmlACatalogDump’:
+catalog.c:2941:21: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *, FILE *)’ {aka ‘void (*)(struct _xmlCatalogEntry *, FILE *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 2941 |                     (xmlHashScanner) xmlCatalogDumpEntry, out);
+      |                     ^
+catalog.c: In function ‘xmlACatalogRemove’:
+catalog.c:3006:17: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *)’ {aka ‘void (*)(struct _xmlCatalogEntry *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 3006 |                 (xmlHashDeallocator) xmlFreeCatalogEntry);
+      |                 ^
+catalog.c: In function ‘xmlCatalogCleanup’:
+catalog.c:3288:21: warning: cast between incompatible function types from ‘void (*)(xmlCatalogEntry *)’ {aka ‘void (*)(struct _xmlCatalogEntry *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 3288 |                     (xmlHashDeallocator)xmlFreeCatalogHashEntryList);
+      |                     ^
+  CC       globals.lo
+  CC       threads.lo
+  CC       c14n.lo
+  CC       xmlstring.lo
+  CC       buf.lo
+  CC       xmlregexp.lo
+  CC       xmlschemas.lo
+xmlschemas.c: In function ‘xmlSchemaFree’:
+xmlschemas.c:4163:21: warning: cast between incompatible function types from ‘void (*)(xmlSchemaBucket *)’ {aka ‘void (*)(struct _xmlSchemaBucket *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 4163 |                     (xmlHashDeallocator) xmlSchemaBucketFree);
+      |                     ^
+xmlschemas.c: In function ‘xmlSchemaDump’:
+xmlschemas.c:4546:35: warning: cast between incompatible function types from ‘void (*)(xmlSchemaType *, FILE *)’ {aka ‘void (*)(struct _xmlSchemaType *, FILE *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+ 4546 |     xmlHashScan(schema->typeDecl, (xmlHashScanner) xmlSchemaTypeDump,
+      |                                   ^
+xmlschemas.c: In function ‘xmlSchemaConstructionCtxtFree’:
+xmlschemas.c:9922:13: warning: cast between incompatible function types from ‘void (*)(xmlSchemaSubstGroup *)’ {aka ‘void (*)(struct _xmlSchemaSubstGroup *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+ 9922 |             (xmlHashDeallocator) xmlSchemaSubstGroupFree);
+      |             ^
+xmlschemas.c: In function ‘xmlSchemaFixupComponents’:
+xmlschemas.c:21297:13: warning: cast between incompatible function types from ‘void (*)(xmlSchemaSubstGroup *)’ {aka ‘void (*)(struct _xmlSchemaSubstGroup *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+21297 |             (xmlHashDeallocator) xmlSchemaSubstGroupFree);
+      |             ^
+xmlschemas.c: In function ‘xmlSchemaAugmentImportedIDC’:
+xmlschemas.c:22044:13: warning: cast between incompatible function types from ‘void (*)(xmlSchemaIDC *, xmlSchemaValidCtxt *)’ {aka ‘void (*)(struct _xmlSchemaIDC *, struct _xmlSchemaValidCtxt *)’} to ‘void (*)(void *, void *, xmlChar *)’ {aka ‘void (*)(void *, void *, unsigned char *)’} [-Wcast-function-type]
+22044 |             (xmlHashScanner) xmlSchemaAugmentIDC, vctxt);
+      |             ^
+  CC       xmlschemastypes.lo
+xmlschemastypes.c: In function ‘xmlSchemaCleanupTypes’:
+xmlschemastypes.c:649:37: warning: cast between incompatible function types from ‘void (*)(xmlSchemaType *)’ {aka ‘void (*)(struct _xmlSchemaType *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+  649 |     xmlHashFree(xmlSchemaTypesBank, (xmlHashDeallocator) xmlSchemaFreeType);
+      |                                     ^
+  CC       xmlunicode.lo
+  CC       xmlreader.lo
+xmlreader.c: In function ‘xmlTextReaderFreeIDTable’:
+xmlreader.c:502:24: warning: cast between incompatible function types from ‘void (*)(xmlID *)’ {aka ‘void (*)(struct _xmlID *)’} to ‘void (*)(void *, xmlChar *)’ {aka ‘void (*)(void *, unsigned char *)’} [-Wcast-function-type]
+  502 |     xmlHashFree(table, (xmlHashDeallocator) xmlFreeID);
+      |                        ^
+  CC       relaxng.lo
+  CC       dict.lo
+  CC       SAX2.lo
+  CC       xmlwriter.lo
+  CC       legacy.lo
+  CC       chvalid.lo
+  CC       pattern.lo
+  CC       xmlsave.lo
+  CC       xmlmodule.lo
+  CC       schematron.lo
+  CC       xzlib.lo
+  CCLD     libxml2.la
+x86_64-linux-gnu-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       testdso.lo
+  CCLD     testdso.la
+x86_64-linux-gnu-ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       xmllint.o
+xmllint.c: In function ‘testSAX’:
+xmllint.c:1655:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 1655 |                 (xmlSchemaValidityErrorFunc) fprintf,
+      |                 ^
+xmllint.c:1656:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 1656 |                 (xmlSchemaValidityWarningFunc) fprintf,
+      |                 ^
+xmllint.c: In function ‘parseAndPrintFile’:
+xmllint.c:2307:41: warning: cast between incompatible function types from ‘void (*)(FILE *)’ to ‘int (*)(void *)’ [-Wcast-function-type]
+ 2307 |                                         (xmlInputCloseCallback) myClose, f,
+      |                                         ^
+xmllint.c:2312:41: warning: cast between incompatible function types from ‘void (*)(FILE *)’ to ‘int (*)(void *)’ [-Wcast-function-type]
+ 2312 |                                         (xmlInputCloseCallback) myClose, f,
+      |                                         ^
+xmllint.c:2765:29: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2765 |             cvp->error    = (xmlValidityErrorFunc) fprintf;
+      |                             ^
+xmllint.c:2766:29: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2766 |             cvp->warning  = (xmlValidityWarningFunc) fprintf;
+      |                             ^
+xmllint.c:2801:25: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2801 |         cvp->error    = (xmlValidityErrorFunc) fprintf;
+      |                         ^
+xmllint.c:2802:25: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2802 |         cvp->warning  = (xmlValidityWarningFunc) fprintf;
+      |                         ^
+xmllint.c:2865:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2865 |                 (xmlRelaxNGValidityErrorFunc) fprintf,
+      |                 ^
+xmllint.c:2866:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2866 |                 (xmlRelaxNGValidityWarningFunc) fprintf,
+      |                 ^
+xmllint.c:2893:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2893 |                 (xmlSchemaValidityErrorFunc) fprintf,
+      |                 ^
+xmllint.c:2894:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 2894 |                 (xmlSchemaValidityWarningFunc) fprintf,
+      |                 ^
+xmllint.c: In function ‘main’:
+xmllint.c:3590:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 3590 |                 (xmlRelaxNGValidityErrorFunc) fprintf,
+      |                 ^
+xmllint.c:3591:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 3591 |                 (xmlRelaxNGValidityWarningFunc) fprintf,
+      |                 ^
+xmllint.c:3616:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 3616 |                 (xmlSchemaValidityErrorFunc) fprintf,
+      |                 ^
+xmllint.c:3617:17: warning: cast between incompatible function types from ‘int (*)(FILE * restrict,  const char * restrict, ...)’ to ‘void (*)(void *, const char *, ...)’ [-Wcast-function-type]
+ 3617 |                 (xmlSchemaValidityWarningFunc) fprintf,
+      |                 ^
+  CCLD     xmllint
+  CC       xmlcatalog.o
+  CCLD     xmlcatalog
+sed -e 's?\@XML_LIBDIR\@?-L/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ports/x86_64-linux-gnu/libxml2/2.9.7/lib?g' \
+    -e 's?\@XML_INCLUDEDIR\@?-I/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ports/x86_64-linux-gnu/libxml2/2.9.7/include/libxml2?g' \
+    -e 's?\@VERSION\@?2.9.7?g' \
+    -e 's?\@XML_LIBS\@?-lxml2 -lz     -lm ?g' \
+       < ./xml2Conf.sh.in > xml2Conf.tmp \
+&& mv xml2Conf.tmp xml2Conf.sh
+make[2]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7'
+Making all in doc
+make[2]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc'
+Making all in .
+make[3]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc'
+Making all in devhelp
+make[3]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc/devhelp'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc/devhelp'
+Making all in examples
+make[3]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc/examples'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc/examples'
+make[2]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/doc'
+Making all in example
+make[2]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/example'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/example'
+Making all in xstc
+make[2]: Entering directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/xstc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7/xstc'
+make[1]: Leaving directory '/home/ryan/development/phase-1-html-forms-lab/vendor/bundle/ruby/3.0.0/gems/nokogiri-1.8.2/ext/nokogiri/tmp/x86_64-linux-gnu/ports/libxml2/2.9.7/libxml2-2.9.7'
